@@ -1,0 +1,53 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+main{
+    display: flex;
+    padding-top: 10px;
+    padding-bottom: 100px;
+}
+
+
+.about-page{
+    max-width: 800px;
+    margin: 0 auto;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items:center;
+    border: 1px solid rgba(95, 158, 160, 0.3); 
+    border-radius: 12px;
+    padding: 50px;
+}
+
+#Page-title{
+    display: flex;
+    color: #00d2ff; 
+    font-size: 36px;
+    margin-top: 0;
+    margin-bottom: 25px; 
+
+    width: 100%;
+    text-align: center;
+    text-shadow: 0 0 10px rgba(0, 212, 255, 0.3);
+    transition: all 0.4s ease;
+}
+
+
+
+.about-page p {
+    padding-top: 20px;
+    font-size: 18px;
+    line-height: 1.8;
+    
+    
+    margin: 0;
+    color: #e2e8f0; 
+    text-align: justify;
+}
+

@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> Login </title>
+</head>
+<body>
+
+  <main class="login-wrapper">
+    <div class="login-card">
+      
+      <div class="card-header">
+        <h1>Welcome back!</h1>
+        <p>Sign in to access your dashboard and personal journey</p>
+    
+    </div>
+
+      <form id="login-form">
+
+        <div class="input-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" placeholder="Enter your email" required>
+
+        </div>
+
+        <div class="input-group">
+          <label for="password">Password</label>
+
+          <input type="password" id="password" placeholder="••••••••" required>
+        </div>
+
+        <div class="form-actions">
+
+          <a href="#" class="forgot-password">Forgot password?</a>
+        </div>
+
+        
+<p id="error-message" style="color: #ff4d4d; font-size: 13px; text-align: center; min-height: 20px; margin-bottom: 15px;"></p>
+
+        <button type="submit" class="login-btn">Log In</button>
+      </form>
+
+      <div class="card-footer">
+        <p>Don't have an account? <a href="signup.html">Sign Up</a></p>
+      </div>
+
+    </div>
+  </main>
+
+  
+<style>
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+
+  background-color: #07111F;
+  color: #ffffff;
+}
+
+
+.login-wrapper {
+  flex: 1;
+  display: flex;
+ justify-content: center;
+  align-items: center;
+    padding: 40px 20px;
+  
+  background-image: 
+    radial-gradient(circle at 10% 20%, rgba(0, 212, 255, 0.1) 0%, transparent 40%),
+    radial-gradient(circle at 90% 80%, rgba(138, 43, 226, 0.1) 0%, transparent 50%);
+}
+
+
+.login-card {
+  width: 100%;
+  max-width: 440px;
+  background: rgba(255, 255, 255, 0.03); 
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px); 
+     border: 1px solid rgba(255, 255, 255, 0.08);
+ border-radius: 20px;
+   padding: 45px 40px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+.card-header {
+  text-align: center;
+  margin-bottom: 35px;
+}
+
+.card-header h1 {
+  font-size: 28px;
+  font-weight: 400;
+  margin-bottom: 12px;
+  letter-spacing: 0.5px;
+}
+
+.card-header p {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.6);
+  line-height: 1.5;
+}
+
+
+.input-group {
+  margin-bottom: 20px;
+}
+
+.input-group label {
+  display: block;
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.7);
+  margin-bottom: 8px;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 14px 16px;
+  
+  background: rgba(255, 255, 255, 0.04);
+  
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 10px;
+  color: #ffffff;
+  
+  font-size: 14px;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.input-group input::placeholder {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.input-group input:focus {
+  border-color: rgba(0, 212, 255, 0.6); 
+  background: rgba(255, 255, 255, 0.08);
+}
+
+
+.form-actions {
+  display: flex;
+  justify-content: space-between;
+   align-items: center;
+
+  margin-top: 15px;
+  margin-bottom: 30px;
+  font-size: 13px;
+}
+
+
+
+
+
+.forgot-password {
+  color: rgba(255, 255, 255, 0.8);
+  text-decoration: none;
+  transition: color 0.2s;
+  padding-left: 260px;
+}
+
+.forgot-password:hover {
+  color: #ffffff;
+}
+
+
+.login-btn {
+  width: 100%;
+  padding: 14px;
+  
+  background-color: #ffffff;
+  color: #111;
+
+  border: none;
+  border-radius: 30px;
+
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.1s;
+  margin-bottom: 30px;
+}
+
+.login-btn:hover {
+  background-color: #f0f0f0;
+}
+
+.login-btn:active {
+  transform: scale(0.98);
+}
+
+.card-footer a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 500;
+  margin-left: 4px;
+}
+
+
+</style>
+
+
+<script type="module">
+  // Supabase
+  import { createClient } from 'https://cdn.jsdelivr.net/npm/@supabase/supabase-js/+esm'
+
+  //  Connect database
+  const supabaseUrl = 'https://dsxkjamhwzxmwkcgujzg.supabase.co';
+  const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImRzeGtqYW1od3p4bXdrY2d1anpnIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODYxMDg3NDUsImV4cCI6MjEwMTY4NDc0NX0.HJjwXT21opcexDsMIXmCl0CS8ITeYk7jAx-g_ZxNcUg';
+  const supabase = createClient(supabaseUrl, supabaseKey);
+
+  const loginForm = document.getElementById('login-form');
+  const emailInput = document.getElementById('email');
+  const passwordInput = document.getElementById('password');
+  const errorMessage = document.getElementById('error-message');
+
+  //  submit click
+  loginForm.addEventListener('submit', async function(event) {
+    
+    // Stop refreshing 
+    event.preventDefault();
+
+    errorMessage.style.color = '#ff4d4d';
+    errorMessage.textContent = '';
+
+    // Get the exact text typed and trim invisible spaces
+    const emailValue = emailInput.value.trim();
+    const passwordValue = passwordInput.value.trim();
+
+    //  VALIDATION
+    if (emailValue === '') {
+      errorMessage.textContent = 'Please enter your email address.';
+      return; 
+    }
+
+    if (passwordValue === '') {
+      errorMessage.textContent = 'Please enter your password.';
+      return; 
+    }
+
+    
+    // loading message 
+    errorMessage.style.color = '#24b47e'; 
+    errorMessage.textContent = 'Checking credentials...';
+    
+    // Tell Supabase to log the user in
+    const { data, error } = await supabase.auth.signInWithPassword({
+      email: emailValue,
+      password: passwordValue,
+    });
+
+    // Handle the Supabase response
+    if (error) {
+      errorMessage.style.color = '#ff4d4d'; // Switch back to red
+      errorMessage.textContent = 'Invalid email or password.'; 
+    } else {
+      errorMessage.textContent = 'Success! Welcome back...';
+      // Redirect to your home page
+      window.location.href = 'home.html'; 
+    }
+  });
+</script>
+
+
+</body>
+</html>

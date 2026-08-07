@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CyberURL</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body style="background-color: #0a0d16;">
+    <div class="header-contant">
+    <header>
+        <nav>
+
+                    <div class="logo" onclick="navigate('home')" style="width: 250px; cursor: pointer;">
+
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="100%" height="100%">
+
+              <defs>
+                <linearGradient id="shieldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#00e5ff" />
+                  <stop offset="50%" stop-color="#0077ff" />
+                  <stop offset="100%" stop-color="#0033cc" />
+                </linearGradient>
+                
+                <linearGradient id="textGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+                  <stop offset="0%" stop-color="#00aaff" />
+                  <stop offset="100%" stop-color="#0022aa" />
+                </linearGradient>
+                
+                <linearGradient id="checkGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#00d2ff" />
+                  <stop offset="100%" stop-color="#0055ff" />
+                </linearGradient>
+              </defs>
+
+              <g fill="url(#shieldGrad)">
+                <rect x="100" y="140" width="14" height="14" />
+                <rect x="135" y="150" width="14" height="14" />
+                <rect x="115" y="170" width="14" height="14" />
+                <rect x="145" y="185" width="14" height="14" />
+                <rect x="125" y="200" width="14" height="14" />
+                <rect x="155" y="215" width="14" height="14" />
+                <rect x="110" y="225" width="10" height="10" />
+                <rect x="140" y="240" width="10" height="10" />
+              </g>
+
+              <path 
+                d="M 140 120 L 140 70 L 250 45 L 360 70 L 360 180 Q 360 260 250 320 Q 155 260 140 190 L 140 170" 
+                fill="none" 
+                stroke="url(#shieldGrad)" 
+                stroke-width="12" 
+                stroke-linecap="round" 
+                stroke-linejoin="round"
+              />
+
+              <g transform="translate(250, 175) rotate(-45)">
+                <rect x="-25" y="-5" width="50" height="80" rx="25" fill="none" stroke="url(#shieldGrad)" stroke-width="14" />
+                <rect x="-25" y="-75" width="50" height="80" rx="25" fill="none" stroke="#ffffff" stroke-width="14" />
+                <path d="M -25 -5 L -25 20" fill="none" stroke="url(#shieldGrad)" stroke-width="14" stroke-linecap="butt"/>
+              </g>
+
+              <g transform="translate(325, 240)">
+                <circle cx="0" cy="0" r="38" fill="url(#checkGrad)" />
+                <path 
+                  d="M -18 2 L -5 14 L 18 -10" 
+                  fill="none" 
+                  stroke="#ffffff" 
+                  stroke-width="8" 
+                  stroke-linecap="round" 
+                  stroke-linejoin="round"
+                />
+              </g>
+
+              <text x="250" y="380" font-family="Arial, Helvetica, sans-serif" font-size="64" font-weight="900" text-anchor="middle">
+                <tspan fill="#ffffff">Cyber</tspan><tspan fill="url(#textGrad)">URL</tspan>
+              </text>
+
+              
+              <g transform="translate(0, 410)">
+                <line x1="120" y1="0" x2="240" y2="0" stroke="url(#shieldGrad)" stroke-width="2" />
+                <circle cx="250" cy="0" r="5" fill="#00aaff" />
+                <line x1="260" y1="0" x2="380" y2="0" stroke="url(#shieldGrad)" stroke-width="2" />
+              </g>
+
+              <text x="250" y="440" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="bold" letter-spacing="7" fill="#8899aa" text-anchor="middle">
+                SMART URL SAFETY ANALYZER
+              </text>
+            </svg>
+        </div>
+             <ul class="nav-links" id="navLinks">
+              <li><a href="index.html">Home</a></li>
+            <li><a href="analyzer.html">Analyzer</a></li>
+             <li><a href="CyberAwareness.html">Cyber Awareness</a></li>
+            <li><a href="about.html">About</a></li>
+               </ul>
+  
+</nav>
+        </ul>
+        </nav>
+    </header>
+    </div>
+    
+<main>
+  <div class="hero-contant">
+
+    <h1 id="pageTitle"> Analyze URLs </h1> 
+    <h3>Before You Click</h3>
+    <p>CyberURL uses smart, predefined JavaScript rules to analyze links 
+      for phishing patterns,
+     missing encryption, and suspicious structures.</p>
+
+      <div class="hero-btns">
+                   <a href="analyzer.html" class="btn btn-primary">Analyze URL</a>
+                   <a href="about.html" class="btn btn-secondary">Learn More</a>
+                </div>
+
+                  <h2>Why Use CyberURL?</h2>
+            <div class="features-grid">
+                <div class="glass-card">
+                    <h3>🔍 Instant Scanning</h3>
+                    <p>No waiting for external APIs. Our engine runs instantly in your browser using predefined rule sets.</p>
+                </div>
+                <div class="glass-card">
+                    <h3>🛡️ Real-time Risk Score</h3>
+                    <p>Get a comprehensive security score from 0 to 100 based on standard cybersecurity parameters.</p>
+                </div>
+                <div class="glass-card">
+                    <h3>📚 Cyber Awareness</h3>
+                    <p>Learn how to identify phishing attempts, smishing, and malicious payloads directly.</p>
+                </div> 
+            </div>
+
+    
+
+
+  </div>
+</main>
+
+
+    <footer class="footer">
+
+    <div class="footer-container">
+
+        <div class="footer-section">
+            <h2>CyberURL</h2>
+
+            <p>
+                Smart URL Safety Analyzer designed to help users detect
+                suspicious URLs and improve cybersecurity awareness.
+            </p>
+        </div>
+
+        <div class="footer-section">
+<center>
+            <h3>Quick Links</h3>
+
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Analyzer</a></li>
+                <li><a href="#">Cyber Awareness</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+</center>
+
+        </div>
+
+        <div class="footer-section">
+
+            <h3>Contact</h3>
+
+            <p>Email: dhruviparmar2508@gmail.com</p>
+
+            <p>GitHub: github.com/dhruvishaparmar01</p>
+
+        </div>
+
+    </div>
+
+    <hr>
+
+    <div class="footer-bottom">
+
+        <p>© 2026 CyberURL. All Rights Reserved.</p>
+
+    </div>
+
+</footer>
+</body>
+</html>

@@ -1,0 +1,128 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+.info-page{
+
+        padding: 120px 50px; 
+
+    min-height: 70vh; 
+
+        display: flex;
+        justify-content: center;
+    flex-direction: column;
+    
+         padding-top: 20px;
+    padding-bottom: 100px; 
+    padding-left: 20px;
+    padding-right: 20px;
+
+}
+
+
+h1{
+     display: flex;
+     justify-content: center;
+    text-align: center;
+    color: #00d2ff;
+    font-size: 30px; 
+    margin-bottom: 5px;
+    letter-spacing: 1px;
+    
+}
+
+#pageTitle{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-size: 30px;
+    text-shadow: 0 0 10px rgba(0, 212, 255, 0.3);
+}
+
+
+.info-page .page-subtitle{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-size: 20px;
+    max-width: 700px; 
+    color: #9CA3AF;
+    padding: 10px;
+    margin: 0 auto;
+    padding-bottom: 20px;
+}
+
+
+
+/* main */
+.awareness-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 40px; 
+    padding: 80px 2px;
+    max-width: 1200px;
+    margin: 0 auto; 
+}
+
+.awareness-card {
+    background: rgba(255, 255, 255, 0.03); 
+    border: 1px solid rgba(95, 158, 160, 0.3); 
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    transition: all 0.4s ease;
+        display: flex; 
+    flex-direction: column;
+    gap: 25px; 
+}
+
+
+.card-title {
+    color: #ffffff;
+    font-size: 22px;
+    margin: 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Thin divider line */
+    padding-bottom: 15px;
+}
+
+.card-subtitle {
+    color: #00d2ff; 
+    font-size: 16px;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.card-section p {
+    color: #B8C5D6;
+    font-size: 15px;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.card-list {
+    list-style: none; 
+    padding-left: 0;
+    margin: 0;
+}
+
+.card-list li {
+    color: #B8C5D6;
+    font-size: 15px;
+    margin-bottom: 12px;
+    padding-left: 20px;
+    position: relative;
+    line-height: 1.5;
+}
+
+.card-list li::before {
+    content: "•";
+    color: #8a2be2; /* Purple */
+    font-size: 20px;
+    position: absolute;
+    left: 0;
+    top: -4px;
+}

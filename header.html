@@ -1,0 +1,185 @@
+<div class="header-contant">
+    <header>
+        <nav>
+          
+               <div class="logo" onclick="navigate('home')" style="width: 250px; cursor: pointer;">
+
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="100%" height="100%">
+
+              <defs>
+                <linearGradient id="shieldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#00e5ff" />
+                  <stop offset="50%" stop-color="#0077ff" />
+                  <stop offset="100%" stop-color="#0033cc" />
+                </linearGradient>
+                
+                <linearGradient id="textGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+                  <stop offset="0%" stop-color="#00aaff" />
+                  <stop offset="100%" stop-color="#0022aa" />
+                </linearGradient>
+                
+                <linearGradient id="checkGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#00d2ff" />
+                  <stop offset="100%" stop-color="#0055ff" />
+                </linearGradient>
+              </defs>
+
+              <g fill="url(#shieldGrad)">
+                <rect x="100" y="140" width="14" height="14" />
+                <rect x="135" y="150" width="14" height="14" />
+                <rect x="115" y="170" width="14" height="14" />
+                <rect x="145" y="185" width="14" height="14" />
+                <rect x="125" y="200" width="14" height="14" />
+                <rect x="155" y="215" width="14" height="14" />
+                <rect x="110" y="225" width="10" height="10" />
+                <rect x="140" y="240" width="10" height="10" />
+              </g>
+
+              <path 
+                d="M 140 120 L 140 70 L 250 45 L 360 70 L 360 180 Q 360 260 250 320 Q 155 260 140 190 L 140 170" 
+                fill="none" 
+                stroke="url(#shieldGrad)" 
+                stroke-width="12" 
+                stroke-linecap="round" 
+                stroke-linejoin="round"
+              />
+
+              <g transform="translate(250, 175) rotate(-45)">
+                <rect x="-25" y="-5" width="50" height="80" rx="25" fill="none" stroke="url(#shieldGrad)" stroke-width="14" />
+                <rect x="-25" y="-75" width="50" height="80" rx="25" fill="none" stroke="#ffffff" stroke-width="14" />
+                <path d="M -25 -5 L -25 20" fill="none" stroke="url(#shieldGrad)" stroke-width="14" stroke-linecap="butt"/>
+              </g>
+
+              <g transform="translate(325, 240)">
+                <circle cx="0" cy="0" r="38" fill="url(#checkGrad)" />
+                <path 
+                  d="M -18 2 L -5 14 L 18 -10" 
+                  fill="none" 
+                  stroke="#ffffff" 
+                  stroke-width="8" 
+                  stroke-linecap="round" 
+                  stroke-linejoin="round"
+                />
+              </g>
+
+              <text x="250" y="380" font-family="Arial, Helvetica, sans-serif" font-size="64" font-weight="900" text-anchor="middle">
+                <tspan fill="#ffffff">Cyber</tspan><tspan fill="url(#textGrad)">URL</tspan>
+              </text>
+
+              
+              <g transform="translate(0, 410)">
+                <line x1="120" y1="0" x2="240" y2="0" stroke="url(#shieldGrad)" stroke-width="2" />
+                <circle cx="250" cy="0" r="5" fill="#00aaff" />
+                <line x1="260" y1="0" x2="380" y2="0" stroke="url(#shieldGrad)" stroke-width="2" />
+              </g>
+
+              <text x="250" y="440" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="bold" letter-spacing="7" fill="#8899aa" text-anchor="middle">
+                SMART URL SAFETY ANALYZER
+              </text>
+            </svg>
+        </div>
+
+             <ul class="nav-links" id="navLinks">
+               <li><a href="index.html">Home</a></li>
+            <li><a href="analyzer.html">Analyzer</a></li>
+             <li><a href="CyberAwareness.html">Cyber Awareness</a></li>
+            <li><a href="about.html">About</a></li>
+  
+        </ul>
+        </nav>
+    </header>
+    </div>
+    
+<main>
+
+</main>
+
+
+
+<style>
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.header-conatnt{
+    position: fixed;
+     top: 0;
+}
+
+nav {
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #07111F;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+    padding: 15px 50px; 
+      border-bottom:2px solid aqua;
+}
+
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo svg {
+    width: 110px; 
+    height: auto;
+    display: block;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    align-items: center;
+    gap: 40px; 
+}
+
+
+nav ul li {
+    display: flex;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    letter-spacing: 0.5px;
+    font-size: 16px;
+    transition: 0.3s ease; 
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+    color: #00d2ff; 
+}
+
+
+body, html {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+    display: flex;
+    flex-direction: column;
+    
+    background-color: #07111F; 
+    background-image: 
+        radial-gradient(circle at 10% 20%, rgba(0, 212, 255, 0.1) 0%, transparent 40%),
+        radial-gradient(circle at 90% 80%, rgba(138, 43, 226, 0.1) 0%, transparent 50%);
+    background-size: 200% 200%; /* Makes the gradients larger so they can move */
+    background-attachment: fixed; /* Keeps the background in place when you scroll */
+} 
+
+main{
+    flex: 1;
+}
+
+</style>
