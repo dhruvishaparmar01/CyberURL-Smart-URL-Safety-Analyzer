@@ -4,7 +4,6 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>cyberUrl - Sign Up</title>
-  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
@@ -27,23 +26,41 @@
           <input type="email" id="email" placeholder="Enter your email" required>
         </div>
 
+        <div class="input-group">
+          <label for="password">Password</label>
+          <div class="input-wrapper">
+            <input type="password" id="password" placeholder="Enter Password" required>
+            <span class="toggle-password" id="toggle-password">
+              <!-- Eye Icon (Open) -->
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                <circle cx="12" cy="12" r="3"></circle>
+              </svg>
+            </span>
+          </div>
+        </div>
 
+        <!-- Confirm Password Field -->
+        <div class="input-group">
+          <label for="confirm_password">Confirm Password</label>
+          <div class="input-wrapper">
+            <input type="password" id="confirm_password" placeholder="Confirm Password" required>
+            <span class="toggle-password" id="toggle-confirm">
+              <!-- Eye Icon (Open) -->
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                <circle cx="12" cy="12" r="3"></circle>
+              </svg>
+            </span>
+          </div>
+        </div>
+
+        <!-- Single Error Message Container -->
         <div id="error-message"></div>
 
-        <div class="input-group">
-    <label for="password">Password</label>
-    <input
-        type="password"
-        id="password"
-        placeholder="Enter Password"
-    >
-</div>
-
-<div id="error-message"></div>
-
-<button type="submit" class="auth-btn">
-    Sign Up
-</button>
+        <button type="submit" class="auth-btn">
+            Sign Up
+        </button>
 
       </form>
 
@@ -56,7 +73,6 @@
 
 
 <style>
-    
 * {
   box-sizing: border-box;
   margin: 0;
@@ -69,7 +85,6 @@ body {
   color: #ffffff;
 }
 
-
 .auth-wrapper {
   display: flex;
   justify-content: center;
@@ -81,7 +96,6 @@ body {
     radial-gradient(circle at 10% 20%, rgba(0, 212, 255, 0.1) 0%, transparent 40%),
     radial-gradient(circle at 90% 80%, rgba(138, 43, 226, 0.1) 0%, transparent 50%);
 }
-
 
 .auth-card {
   width: 100%;
@@ -113,7 +127,6 @@ body {
   line-height: 1.5;
 }
 
-
 .input-group {
   margin-bottom: 20px;
 }
@@ -123,6 +136,12 @@ body {
   font-size: 12px;
   color: rgba(255, 255, 255, 0.7);
   margin-bottom: 8px;
+}
+
+.input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
 }
 
 .input-group input {
@@ -135,6 +154,7 @@ body {
   font-size: 14px;
   outline: none;
   transition: all 0.3s ease;
+  padding-right: 45px;
 }
 
 .input-group input::placeholder {
@@ -146,28 +166,51 @@ body {
   background: rgba(255, 255, 255, 0.08);
 }
 
+/* Eye Toggle Styling */
+.toggle-password {
+  position: absolute;
+  right: 15px;
+  cursor: pointer;
+  color: rgba(255, 255, 255, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.3s;
+}
+
+.toggle-password:hover {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.toggle-password svg {
+  width: 20px;
+  height: 20px;
+}
 
 .auth-btn {
   width: 100%;
   padding: 14px;
+
   background-color: #ffffff;
   color: #111;
+
   border: none;
+ 
   border-radius: 30px;
   font-size: 15px;
   font-weight: 600;
   cursor: pointer;
   transition: background-color 0.2s, transform 0.1s;
-  margin-top: 15px;
+  margin-top: 5px;
   margin-bottom: 30px;
 }
 
-#error-message{
-    color:#ff4d4d;
-    margin-top:10px;
-    margin-bottom:15px;
-    font-size:14px;
-    text-align:center;
+#error-message {
+    color: #ff4d4d;
+    margin-bottom: 15px;
+    font-size: 13px;
+    line-height: 1.4;
+    text-align: left; 
 }
 
 .auth-btn:hover {
@@ -180,6 +223,7 @@ body {
 
 .card-footer {
   text-align: center;
+ 
   font-size: 13px;
   color: rgba(255, 255, 255, 0.6);
   border-top: 1px solid rgba(255, 255, 255, 0.1);
@@ -189,67 +233,130 @@ body {
 .card-footer a {
   color: #ffffff;
   text-decoration: none;
-  font-weight: 500;
+    font-weight: 500;
   margin-left: 4px;
 }
 
 .card-footer a:hover {
   text-decoration: underline;
 }
-
-
 </style>
 
 <script type="module">
   // Supabase
   import { createClient } from 'https://cdn.jsdelivr.net/npm/@supabase/supabase-js/+esm'
 
-  // 2. Connect database
+  // Connect database
   const supabaseUrl = 'https://dsxkjamhwzxmwkcgujzg.supabase.co';
   const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImRzeGtqYW1od3p4bXdrY2d1anpnIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODYxMDg3NDUsImV4cCI6MjEwMTY4NDc0NX0.HJjwXT21opcexDsMIXmCl0CS8ITeYk7jAx-g_ZxNcUg';
   const supabase = createClient(supabaseUrl, supabaseKey);
 
   const signupForm = document.getElementById('signup-form');
-
   const nameInput = document.getElementById('name');
   const emailInput = document.getElementById('email');
   const passwordInput = document.getElementById('password'); 
-
+  const confirmPasswordInput = document.getElementById('confirm_password'); 
   const errorMessage = document.getElementById('error-message');
+
+  // SVG Icons for the Toggle
+  const eyeOpenIcon = `
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+      <circle cx="12" cy="12" r="3"></circle>
+    </svg>`;
+    
+  const eyeClosedIcon = `
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1-4.24-4.24"></path>
+      <line x1="1" y1="1" x2="23" y2="23"></line>
+    </svg>`;
+
+  // Password Toggle Functionality
+  function setupPasswordToggle(toggleBtnId, inputFieldId) {
+    const toggleBtn = document.getElementById(toggleBtnId);
+    const inputField = document.getElementById(inputFieldId);
+
+    toggleBtn.addEventListener('click', function () {
+
+
+      const type = inputField.getAttribute('type') === 'password' ? 'text' : 'password';
+      inputField.setAttribute('type', type);
+      
+      toggleBtn.innerHTML = type === 'password' ? eyeOpenIcon : eyeClosedIcon;
+    });
+  }
+
+  setupPasswordToggle('toggle-password', 'password');
+  setupPasswordToggle('toggle-confirm', 'confirm_password');
+
+
+  // Strict Password Validation Function
+  function validateRegistration(password, confirmPassword) {
+      let errors = [];
+
+      if (password.length < 8 || password.length > 32) {
+          errors.push("Password must be between 8 and 32 characters.");
+      }
+      if (!/[A-Z]/.test(password)) {
+          errors.push("Password must contain at least one uppercase letter.");
+      }
+      if (!/[a-z]/.test(password)) {
+          errors.push("Password must contain at least one lowercase letter.");
+      }
+      if (!/\d/.test(password)) {
+          errors.push("Password must contain at least one number.");
+      }
+      if (!/[!@#$%^&*(),.?":{}|<>\-_~]/.test(password)) {
+          errors.push("Password must contain at least one special character.");
+      }
+      if (/\s/.test(password)) {
+          errors.push("Password must not contain any spaces.");
+      }
+      if (password !== confirmPassword) {
+          errors.push("Passwords do not match.");
+      }
+
+      return {
+          isValid: errors.length === 0,
+          errors: errors
+      };
+  }
 
   // submit click
   signupForm.addEventListener('submit', async function(event) {
     
-    // Stop refreshing 
     event.preventDefault();
 
     errorMessage.style.color = '#ff4d4d';
-    errorMessage.textContent = '';
+     errorMessage.innerHTML = ''; 
 
-    // Get the exact text typed and trim invisible spaces
     const nameValue = nameInput.value.trim();
-    const emailValue = emailInput.value.trim();
+     const emailValue = emailInput.value.trim();
     const passwordValue = passwordInput.value.trim();
+    const confirmPasswordValue = confirmPasswordInput.value.trim(); 
 
-    // VALIDATION 
+    // Basic Field Validation 
     if (nameValue.length < 2) {
-      errorMessage.textContent = 'Please enter your full name.';
+      errorMessage.innerHTML = 'Please enter your full name.';
       return; 
     }
 
     if (emailValue === '') {
-      errorMessage.textContent = 'Please provide a valid email address.';
+      errorMessage.innerHTML = 'Please provide a valid email address.';
       return;
     }
 
-    if (passwordValue.length < 6) {
-      errorMessage.textContent = 'Your password must be at least 6 characters long for security.';
-      return;
-    }
+    // Password Validation
+    const passwordValidation = validateRegistration(passwordValue, confirmPasswordValue);
+    
+    if (!passwordValidation.isValid) {
 
+      errorMessage.innerHTML = passwordValidation.errors.join('<br>');
+        return;
+    }
     
     errorMessage.style.color = '#24b47e'; 
-    errorMessage.textContent = 'Creating your account...';
+    errorMessage.innerHTML = 'Creating your account...';
 
     // Tell Supabase to register the user
     const { data, error } = await supabase.auth.signUp({
@@ -259,11 +366,10 @@ body {
 
     // Handle the Supabase response
     if (error) {
-      errorMessage.style.color = '#ff4d4d'; // Switch back to red for errors
-      errorMessage.textContent = error.message; // Show the actual Supabase error 
+      errorMessage.style.color = '#ff4d4d'; 
+      errorMessage.innerHTML = error.message; 
     } else {
-      errorMessage.textContent = 'Success! Redirecting to login...';
-      // Redirect to the login page
+      errorMessage.innerHTML = 'Success! Redirecting to login...';
       window.location.href = 'index.html'; 
     }
   });
