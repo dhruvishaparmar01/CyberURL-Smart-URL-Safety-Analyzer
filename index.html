@@ -13,30 +13,34 @@
       <div class="card-header">
         <h1>Welcome back!</h1>
         <p>Sign in to access your dashboard and personal journey</p>
-    
-    </div>
+      </div>
 
       <form id="login-form">
 
         <div class="input-group">
           <label for="email">Email</label>
           <input type="email" id="email" placeholder="Enter your email" required>
-
         </div>
 
         <div class="input-group">
           <label for="password">Password</label>
-
-          <input type="password" id="password" placeholder="••••••••" required>
+          <div class="input-wrapper">
+            <input type="password" id="password" placeholder="••••••••" required>
+            <span class="toggle-password" id="toggle-password">
+              <!-- Eye Icon (Open) -->
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                <circle cx="12" cy="12" r="3"></circle>
+              </svg>
+            </span>
+          </div>
         </div>
 
         <div class="form-actions">
-
           <a href="#" class="forgot-password">Forgot password?</a>
         </div>
 
-        
-<p id="error-message" style="color: #ff4d4d; font-size: 13px; text-align: center; min-height: 20px; margin-bottom: 15px;"></p>
+        <p id="error-message" style="color: #ff4d4d; font-size: 13px; text-align: center; min-height: 20px; margin-bottom: 15px;"></p>
 
         <button type="submit" class="login-btn">Log In</button>
       </form>
@@ -62,34 +66,33 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-
   background-color: #07111F;
   color: #ffffff;
 }
 
-
 .login-wrapper {
   flex: 1;
   display: flex;
- justify-content: center;
+  justify-content: center;
   align-items: center;
-    padding: 40px 20px;
+  padding: 40px 20px;
   
   background-image: 
     radial-gradient(circle at 10% 20%, rgba(0, 212, 255, 0.1) 0%, transparent 40%),
     radial-gradient(circle at 90% 80%, rgba(138, 43, 226, 0.1) 0%, transparent 50%);
 }
 
-
 .login-card {
   width: 100%;
   max-width: 440px;
-  background: rgba(255, 255, 255, 0.03); 
+  background: rgba(255, 255, 255, 0.03);
+
   backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px); 
-     border: 1px solid rgba(255, 255, 255, 0.08);
- border-radius: 20px;
-   padding: 45px 40px;
+    -webkit-backdrop-filter: blur(16px); 
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 20px;
+  padding: 45px 40px;
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
 }
 
@@ -111,7 +114,6 @@ body {
   line-height: 1.5;
 }
 
-
 .input-group {
   margin-bottom: 20px;
 }
@@ -119,23 +121,30 @@ body {
 .input-group label {
   display: block;
   font-size: 12px;
-  color: rgba(255, 255, 255, 0.7);
+    color: rgba(255, 255, 255, 0.7);
   margin-bottom: 8px;
+}
+
+.input-wrapper {
+  position: relative;
+  display: flex;
+
+  align-items: center;
 }
 
 .input-group input {
   width: 100%;
   padding: 14px 16px;
-  
+ 
   background: rgba(255, 255, 255, 0.04);
-  
   border: 1px solid rgba(255, 255, 255, 0.15);
+ 
   border-radius: 10px;
   color: #ffffff;
-  
   font-size: 14px;
   outline: none;
   transition: all 0.3s ease;
+  padding-right: 45px; 
 }
 
 .input-group input::placeholder {
@@ -147,23 +156,40 @@ body {
   background: rgba(255, 255, 255, 0.08);
 }
 
+/* Eye Toggle Styling */
+.toggle-password {
+  position: absolute;
+  right: 15px;
+  cursor: pointer;
+  color: rgba(255, 255, 255, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.3s;
+}
+
+.toggle-password:hover {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.toggle-password svg {
+  width: 20px;
+  height: 20px;
+}
 
 .form-actions {
   display: flex;
-  justify-content: space-between;
-   align-items: center;
-
+  justify-content: space-between; 
+  
+align-items: center;
   margin-top: 15px;
   margin-bottom: 30px;
   font-size: 13px;
 }
 
-
-
-
-
 .forgot-password {
   color: rgba(255, 255, 255, 0.8);
+ 
   text-decoration: none;
   transition: color 0.2s;
   padding-left: 260px;
@@ -173,19 +199,17 @@ body {
   color: #ffffff;
 }
 
-
 .login-btn {
   width: 100%;
   padding: 14px;
-  
-  background-color: #ffffff;
+    background-color: #ffffff;
   color: #111;
 
   border: none;
   border-radius: 30px;
 
   font-size: 15px;
-  font-weight: 600;
+   font-weight: 600;
   cursor: pointer;
   transition: background-color 0.2s, transform 0.1s;
   margin-bottom: 30px;
@@ -199,22 +223,28 @@ body {
   transform: scale(0.98);
 }
 
+.card-footer {
+  text-align: center; /* Added for alignment */
+}
+
+.card-footer p {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.6);
+}
+
 .card-footer a {
   color: #ffffff;
   text-decoration: none;
   font-weight: 500;
   margin-left: 4px;
 }
-
-
 </style>
-
 
 <script type="module">
   // Supabase
   import { createClient } from 'https://cdn.jsdelivr.net/npm/@supabase/supabase-js/+esm'
 
-  //  Connect database
+  // Connect database
   const supabaseUrl = 'https://dsxkjamhwzxmwkcgujzg.supabase.co';
   const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImRzeGtqYW1od3p4bXdrY2d1anpnIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODYxMDg3NDUsImV4cCI6MjEwMTY4NDc0NX0.HJjwXT21opcexDsMIXmCl0CS8ITeYk7jAx-g_ZxNcUg';
   const supabase = createClient(supabaseUrl, supabaseKey);
@@ -224,7 +254,35 @@ body {
   const passwordInput = document.getElementById('password');
   const errorMessage = document.getElementById('error-message');
 
-  //  submit click
+  // SVG Icons for the Toggle
+  const eyeOpenIcon = `
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+      <circle cx="12" cy="12" r="3"></circle>
+    </svg>`;
+    
+  const eyeClosedIcon = `
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1-4.24-4.24"></path>
+      <line x1="1" y1="1" x2="23" y2="23"></line>
+    </svg>`;
+
+  // Password Toggle Functionality
+  function setupPasswordToggle(toggleBtnId, inputFieldId) {
+    const toggleBtn = document.getElementById(toggleBtnId);
+    const inputField = document.getElementById(inputFieldId);
+
+    toggleBtn.addEventListener('click', function () {
+      // Toggle the input type
+      const type = inputField.getAttribute('type') === 'password' ? 'text' : 'password';
+      inputField.setAttribute('type', type);
+      
+      toggleBtn.innerHTML = type === 'password' ? eyeOpenIcon : eyeClosedIcon;
+    });
+  }
+
+  setupPasswordToggle('toggle-password', 'password');
+
   loginForm.addEventListener('submit', async function(event) {
     
     // Stop refreshing 
@@ -233,23 +291,21 @@ body {
     errorMessage.style.color = '#ff4d4d';
     errorMessage.textContent = '';
 
-    // Get the exact text typed and trim invisible spaces
+    // Get exact text and trim spaces
     const emailValue = emailInput.value.trim();
     const passwordValue = passwordInput.value.trim();
 
-    //  VALIDATION
+    // VALIDATION
     if (emailValue === '') {
-      errorMessage.textContent = 'Please enter your email address.';
+        errorMessage.textContent = 'Please enter your email address.';
       return; 
     }
 
     if (passwordValue === '') {
-      errorMessage.textContent = 'Please enter your password.';
+       errorMessage.textContent = 'Please enter your password.';
       return; 
     }
-
     
-    // loading message 
     errorMessage.style.color = '#24b47e'; 
     errorMessage.textContent = 'Checking credentials...';
     
@@ -258,8 +314,8 @@ body {
       email: emailValue,
       password: passwordValue,
     });
-
-    // Handle the Supabase response
+  
+    // Handle Supabase response
     if (error) {
       errorMessage.style.color = '#ff4d4d'; // Switch back to red
       errorMessage.textContent = 'Invalid email or password.'; 
@@ -270,7 +326,6 @@ body {
     }
   });
 </script>
-
 
 </body>
 </html>
