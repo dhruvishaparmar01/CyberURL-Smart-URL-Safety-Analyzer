@@ -27,7 +27,10 @@ nav {
 .logo {
     display: flex;
     align-items: center;
+    flex: 1;
 }
+
+
 
 .logo svg {
     width: 110px; 
@@ -36,9 +39,11 @@ nav {
 }
 
 nav ul {
+    flex: 1;
     display: flex;
-    list-style: none;
+    justify-content: center;
     align-items: center;
+    list-style: none;
     gap: 40px; 
 }
 
@@ -51,9 +56,12 @@ nav ul li a {
     color: white;
     text-decoration: none;
     letter-spacing: 0.5px;
+    justify-content: center;
     font-size: 16px;
     transition: 0.3s ease; 
 }
+
+
 
 nav ul li a:hover,
 nav ul li a.active {
@@ -77,6 +85,46 @@ body, html {
     background-size: 200% 200%; 
     background-attachment: fixed; 
 } 
+
+/* Authentication Buttons Container */
+.auth-buttons {
+    flex: 1; 
+    display: flex;
+    justify-content: flex-end; 
+    align-items: center;
+    gap: 15px;
+}
+
+/* General Button Styling */
+.auth-buttons a {
+    text-decoration: none;
+    font-size: 16px;
+    padding: 8px 24px;
+    border-radius: 6px;
+    transition: 0.3s ease;
+    font-weight: 600;
+}
+
+/* Login Button */
+.btn-login {
+    color: white;
+    border: 1px solid transparent;
+}
+
+.btn-login:hover {
+    color: #00d2ff; /* CyberURL cyan */
+}
+
+/* Sign Up Button */
+.btn-signup {
+    background: linear-gradient(90deg, #00d2ff, #0077ff);
+    color: white;
+}
+
+.btn-signup:hover {
+    box-shadow: 0 0 15px rgba(0, 210, 255, 0.5); /* Glowing effect */
+    transform: translateY(-2px); /* Slight lift on hover */
+}
 
 main{
     flex: 1;
@@ -363,3 +411,4 @@ h2 {
     box-shadow: 0 10px 25px rgba(95, 158, 160, 0.2); 
     background-color: rgba(255, 255, 255, 0.06); 
 }
+
