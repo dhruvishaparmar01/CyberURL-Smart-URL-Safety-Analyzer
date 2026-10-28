@@ -120,9 +120,10 @@ h1{
 
 .card-list li::before {
     content: "•";
-    color: #8a2be2; /* Purple */
+    color: #8a2be2; 
     font-size: 20px;
     position: absolute;
     left: 0;
     top: -4px;
 }
+
