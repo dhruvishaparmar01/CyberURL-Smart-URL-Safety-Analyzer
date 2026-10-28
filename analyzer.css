@@ -9,23 +9,15 @@ main{
     flex: 1;
 }
 
-.Analyzer-page{
-
-        padding: 120px 20px; 
-
+.Analyzer-page {
     min-height: 70vh; 
-
-        display: flex;
-        justify-content: center;
+    display: flex;
     flex-direction: column;
-    
-
-     padding-top: 20px;
-    padding-bottom: 700px; 
-    padding-left: 20px;
-    padding-right: 20px;
-
+    justify-content: flex-start; 
+    padding: 40px 20px; 
 }
+
+ 
 
 h1{
      display: flex;
@@ -104,4 +96,204 @@ h1{
 .analyze-btn:hover {
     transform: translateY(-2px); 
     box-shadow: 0 6px 20px rgba(138, 43, 226, 0.5); 
+}
+
+
+
+
+
+/*  Base Container  */
+#analysis-results {
+    width: 100%;
+    max-width: 900px;
+    margin: 40px auto;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #e2e8f0;
+}
+
+.report-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/*  Report Cards */
+.report-card {
+    background-color: #1a2030; 
+    border-radius: 12px;
+    padding: 30px;
+    border: 1px solid #252d40;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.report-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+    border-color: #313b52;
+}
+
+.report-card h3 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 18px;
+    color: #ffffff;
+    font-weight: 600;
+}
+
+/*  Top Section: Score & Status  */
+.score-section {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+/* Perfected Donut Chart */
+.score-circle {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+    font-weight: bold;
+    color: #17c964; 
+    background: conic-gradient(#17c964 var(--score, 0%), #0c111a 0deg);
+    position: relative;
+    flex-shrink: 0;
+}
+
+/* Inner cutout matching the card background */
+.score-circle::before {
+    content: "";
+    position: absolute;
+    inset: 8px; 
+    background-color: #1a2030;
+    border-radius: 50%;
+}
+
+.score-circle span {
+    position: relative;
+    z-index: 1;
+}
+
+/* Wide "SAFE" Pill Button */
+.status-details {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.status-pill {
+    width: 100%;
+    padding: 16px;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 22px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: #ffffff; 
+    transition: filter 0.2s ease, transform 0.2s ease;
+}
+
+.status-pill:hover {
+    filter: brightness(1.1);
+    transform: scale(1.01);
+}
+
+.status-safe { background-color: #17c964; }
+.status-warning { background-color: #f5a623; }
+.status-danger { background-color: #ef4444; }
+
+.risk-level {
+    margin-top: 12px;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.risk-safe { color: #17c964; }
+.risk-warning { color: #f5a623; }
+.risk-danger { color: #ef4444; }
+
+
+/* Middle Section: Grid Layout  */
+.grid-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+/* Security Checks List */
+.check-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.check-list li {
+    font-size: 15px;
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    transition: transform 0.2s ease;
+}
+
+.check-list li:hover {
+    transform: translateX(6px);
+}
+
+.check-pass { color: #17c964; }
+.check-fail { color: #ef4444; }
+
+/* URL Breakdown Rows  */
+.breakdown-row {
+    background-color: #0c111a; /* Very dark background for rows */
+    padding: 14px 16px;
+    border-radius: 8px;
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    border: 1px solid #1a2030;
+    transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.breakdown-row:last-child {
+    margin-bottom: 0;
+}
+
+.breakdown-row:hover {
+    background-color: #111826;
+    border-color: #252d40;
+}
+
+.breakdown-row strong {
+    color: #ffffff;
+    width: 120px;
+    flex-shrink: 0;
+    font-weight: 600;
+}
+
+.breakdown-row span {
+    color: #94a3b8;
+    word-break: break-word;
+    overflow-wrap: break-word;
+    flex-grow: 1;
+}
+
+/*  Responsive adjustments  */
+@media (max-width: 768px) {
+    .grid-section { 
+        grid-template-columns: 1fr; 
+    }
+    .score-section { 
+        flex-direction: column; 
+        gap: 30px; 
+    }
 }
