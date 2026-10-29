@@ -1,325 +1,201 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title> Login </title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CyberURL</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-<body>
 
-  <main class="login-wrapper">
-    <div class="login-card">
-      
-      <div class="card-header">
-        <h1>Welcome back!</h1>
-        <p>Sign in to access your dashboard and personal journey</p>
-      </div>
 
-      <form id="login-form">
+<body style="background-color: #0a0d16;">
+    <div class="header-contant">
+    <header>
+        <nav>
 
-        <div class="input-group">
-          <label for="email">Email</label>
-          <input type="email" id="email" placeholder="Enter your email" required>
+
+                    <div class="logo" onclick="navigate('home')" style="width: 250px; cursor: pointer;">
+
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="100%" height="100%">
+
+              <defs>
+                <linearGradient id="shieldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#00e5ff" />
+                  <stop offset="50%" stop-color="#0077ff" />
+                  <stop offset="100%" stop-color="#0033cc" />
+                </linearGradient>
+                
+                <linearGradient id="textGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+                  <stop offset="0%" stop-color="#00aaff" />
+                  <stop offset="100%" stop-color="#0022aa" />
+                </linearGradient>
+                
+                <linearGradient id="checkGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#00d2ff" />
+                  <stop offset="100%" stop-color="#0055ff" />
+                </linearGradient>
+              </defs>
+
+              <g fill="url(#shieldGrad)">
+                <rect x="100" y="140" width="14" height="14" />
+                <rect x="135" y="150" width="14" height="14" />
+                <rect x="115" y="170" width="14" height="14" />
+                <rect x="145" y="185" width="14" height="14" />
+                <rect x="125" y="200" width="14" height="14" />
+                <rect x="155" y="215" width="14" height="14" />
+                <rect x="110" y="225" width="10" height="10" />
+                <rect x="140" y="240" width="10" height="10" />
+              </g>
+
+              <path 
+                d="M 140 120 L 140 70 L 250 45 L 360 70 L 360 180 Q 360 260 250 320 Q 155 260 140 190 L 140 170" 
+                fill="none" 
+                stroke="url(#shieldGrad)" 
+                stroke-width="12" 
+                stroke-linecap="round" 
+                stroke-linejoin="round"
+              />
+
+              <g transform="translate(250, 175) rotate(-45)">
+                <rect x="-25" y="-5" width="50" height="80" rx="25" fill="none" stroke="url(#shieldGrad)" stroke-width="14" />
+                <rect x="-25" y="-75" width="50" height="80" rx="25" fill="none" stroke="#ffffff" stroke-width="14" />
+                <path d="M -25 -5 L -25 20" fill="none" stroke="url(#shieldGrad)" stroke-width="14" stroke-linecap="butt"/>
+              </g>
+
+              <g transform="translate(325, 240)">
+                <circle cx="0" cy="0" r="38" fill="url(#checkGrad)" />
+                <path 
+                  d="M -18 2 L -5 14 L 18 -10" 
+                  fill="none" 
+                  stroke="#ffffff" 
+                  stroke-width="8" 
+                  stroke-linecap="round" 
+                  stroke-linejoin="round"
+                />
+              </g>
+
+              <text x="250" y="380" font-family="Arial, Helvetica, sans-serif" font-size="64" font-weight="900" text-anchor="middle">
+                <tspan fill="#ffffff">Cyber</tspan><tspan fill="url(#textGrad)">URL</tspan>
+              </text>
+
+              
+              <g transform="translate(0, 410)">
+                <line x1="120" y1="0" x2="240" y2="0" stroke="url(#shieldGrad)" stroke-width="2" />
+                <circle cx="250" cy="0" r="5" fill="#00aaff" />
+                <line x1="260" y1="0" x2="380" y2="0" stroke="url(#shieldGrad)" stroke-width="2" />
+              </g>
+
+              <text x="250" y="440" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="bold" letter-spacing="7" fill="#8899aa" text-anchor="middle">
+                SMART URL SAFETY ANALYZER
+              </text>
+            </svg>
+        </div>
+           <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="analyzer.html">Analyzer</a></li>
+                <li><a href="CyberAwareness.html">Cyber Awareness</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+            
+
+            <!-- 3. RIGHT: Login & Sign Up Buttons -->
+            <div class="auth-buttons">
+                <a href="login.html" class="btn-login">Login</a>
+                <a href="signup.html" class="btn-signup">Sign Up</a>
+            </div>
+  
+</nav>
+        </ul>
+        </nav>
+    </header>
+    </div>
+    
+<main>
+  <div class="hero-contant">
+
+    <h1 id="pageTitle"> Analyze URLs </h1> 
+    <h3>Before You Click</h3>
+    <p>CyberURL uses smart, predefined JavaScript rules to analyze links 
+      for phishing patterns,
+     missing encryption, and suspicious structures.</p>
+
+      <div class="hero-btns">
+                   <a href="analyzer.html" class="btn btn-primary">Analyze URL</a>
+                   <a href="about.html" class="btn btn-secondary">Learn More</a>
+                </div>
+
+                  <h2>Why Use CyberURL?</h2>
+            <div class="features-grid">
+                <div class="glass-card">
+                    <h3>🔍 Instant Scanning</h3>
+                    <p>No waiting for external APIs. Our engine runs instantly in your browser using predefined rule sets.</p>
+                </div>
+                <div class="glass-card">
+                    <h3>🛡️ Real-time Risk Score</h3>
+                    <p>Get a comprehensive security score from 0 to 100 based on standard cybersecurity parameters.</p>
+                </div>
+                <div class="glass-card">
+                    <h3>📚 Cyber Awareness</h3>
+                    <p>Learn how to identify phishing attempts, smishing, and malicious payloads directly.</p>
+                </div> 
+            </div>
+
+    
+
+
+  </div>
+</main>
+
+
+    <footer class="footer">
+
+    <div class="footer-container">
+
+        <div class="footer-section">
+            <h2>CyberURL</h2>
+
+            <p>
+                Smart URL Safety Analyzer designed to help users detect
+                suspicious URLs and improve cybersecurity awareness.
+            </p>
         </div>
 
-        <div class="input-group">
-          <label for="password">Password</label>
-          <div class="input-wrapper">
-            <input type="password" id="password" placeholder="••••••••" required>
-            <span class="toggle-password" id="toggle-password">
-              <!-- Eye Icon (Open) -->
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
-                <circle cx="12" cy="12" r="3"></circle>
-              </svg>
-            </span>
-          </div>
+        <div class="footer-section">
+<center>
+            <h3>Quick Links</h3>
+
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="analyzer.html">Analyzer</a></li>
+                <li><a href="CyberAwareness.html">Cyber Awareness</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+</center>
+
         </div>
 
+        <div class="footer-section">
 
-        <p id="error-message" style="color: #ff4d4d; font-size: 13px; text-align: center; min-height: 20px; margin-bottom: 15px;"></p>
+            <h3>Contact</h3>
 
-        <button type="submit" class="login-btn">Log In</button>
-      </form>
+            <p>Email: dhruviparmar2508@gmail.com</p>
 
-      <div class="card-footer">
-        <p>Don't have an account? <a href="signup.html">Sign Up</a></p>
-      </div>
+            <p>GitHub: github.com/dhruvishaparmar01</p>
+
+        </div>
 
     </div>
-  </main>
 
-  
-<style>
+    <hr>
 
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  font-family: -apple-system;
-}
+    <div class="footer-bottom">
 
-body {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-  background-color: #07111F;
-  color: #ffffff;
-}
+        <p>© 2026 CyberURL. All Rights Reserved.</p>
 
-.login-wrapper {
-  flex: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 40px 20px;
+    </div>
 
-  background-image: 
-    radial-gradient(circle at 10% 20%, rgba(0, 212, 255, 0.1) 0%, transparent 40%),
-    radial-gradient(circle at 90% 80%, rgba(138, 43, 226, 0.1) 0%, transparent 50%);
-}
-
-.login-card {
-  width: 100%;
-  max-width: 440px;
-  background: rgba(255, 255, 255, 0.03);
-
-  backdrop-filter: blur(16px);
-    -webkit-backdrop-filter: blur(16px); 
-
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  border-radius: 20px;
-  padding: 45px 40px;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
-}
-
-.card-header {
-  text-align: center;
-  margin-bottom: 35px;
-}
-
-.card-header h1 {
-  font-size: 28px;
-  font-weight: 400;
-  margin-bottom: 12px;
-  letter-spacing: 0.5px;
-}
-
-.card-header p {
-  font-size: 14px;
-  color: rgba(255, 255, 255, 0.6);
-  line-height: 1.5;
-}
-
-.input-group {
-  margin-bottom: 20px;
-}
-
-.input-group label {
-  display: block;
-  font-size: 12px;
-    color: rgba(255, 255, 255, 0.7);
-  margin-bottom: 8px;
-}
-
-.input-wrapper {
-  position: relative;
-  display: flex;
-
-  align-items: center;
-}
-
-.input-group input {
-  width: 100%;
-  padding: 14px 16px;
- 
-  background: rgba(255, 255, 255, 0.04);
-  border: 1px solid rgba(255, 255, 255, 0.15);
- 
-  border-radius: 10px;
-  color: #ffffff;
-  font-size: 14px;
-  outline: none;
-  transition: all 0.3s ease;
-  padding-right: 45px; 
-}
-
-.input-group input::placeholder {
-  color: rgba(255, 255, 255, 0.3);
-}
-
-.input-group input:focus {
-  border-color: rgba(0, 212, 255, 0.6); 
-  background: rgba(255, 255, 255, 0.08);
-}
-
-/* Eye Toggle Styling */
-.toggle-password {
-  position: absolute;
-  right: 15px;
-  cursor: pointer;
-  color: rgba(255, 255, 255, 0.5);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: color 0.3s;
-}
-
-.toggle-password:hover {
-  color: rgba(255, 255, 255, 0.9);
-}
-
-.toggle-password svg {
-  width: 20px;
-  height: 20px;
-}
-
-.form-actions {
-  display: flex;
-  justify-content: space-between; 
-  
-align-items: center;
-  margin-top: 15px;
-  margin-bottom: 30px;
-  font-size: 13px;
-}
-
-.forgot-password {
-  color: rgba(255, 255, 255, 0.8);
- 
-  text-decoration: none;
-  transition: color 0.2s;
-  padding-left: 260px;
-}
-
-
-.login-btn {
-  width: 100%;
-  padding: 14px;
-    background-color: #ffffff;
-  color: #111;
-
-  border: none;
-  border-radius: 30px;
-
-  font-size: 15px;
-   font-weight: 600;
-  cursor: pointer;
-  transition: background-color 0.2s, transform 0.1s;
-  margin-bottom: 30px;
-}
-
-.login-btn:hover {
-  background-color: #f0f0f0;
-}
-
-.login-btn:active {
-  transform: scale(0.98);
-}
-
-.card-footer {
-  text-align: center; /* Added for alignment */
-}
-
-.card-footer p {
-  font-size: 13px;
-  color: rgba(255, 255, 255, 0.6);
-}
-
-.card-footer a {
-  color: #ffffff;
-  text-decoration: none;
-  font-weight: 500;
-  margin-left: 4px;
-}
-</style>
-
-<script type="module">
-  // Supabase
-  import { createClient } from 'https://cdn.jsdelivr.net/npm/@supabase/supabase-js/+esm'
-
-  // Connect database
-  const supabaseUrl = 'https://dsxkjamhwzxmwkcgujzg.supabase.co';
-  const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImRzeGtqYW1od3p4bXdrY2d1anpnIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODYxMDg3NDUsImV4cCI6MjEwMTY4NDc0NX0.HJjwXT21opcexDsMIXmCl0CS8ITeYk7jAx-g_ZxNcUg';
-  const supabase = createClient(supabaseUrl, supabaseKey);
-
-  const loginForm = document.getElementById('login-form');
-  const emailInput = document.getElementById('email');
-  const passwordInput = document.getElementById('password');
-  const errorMessage = document.getElementById('error-message');
-
-  // SVG Icons for the Toggle
-  const eyeOpenIcon = `
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-      <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
-      <circle cx="12" cy="12" r="3"></circle>
-    </svg>`;
-    
-  const eyeClosedIcon = `
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-      <path d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1-4.24-4.24"></path>
-      <line x1="1" y1="1" x2="23" y2="23"></line>
-    </svg>`;
-
-  // Password Toggle Functionality
-  function setupPasswordToggle(toggleBtnId, inputFieldId) {
-    const toggleBtn = document.getElementById(toggleBtnId);
-    const inputField = document.getElementById(inputFieldId);
-
-    toggleBtn.addEventListener('click', function () {
-      // Toggle the input type
-      const type = inputField.getAttribute('type') === 'password' ? 'text' : 'password';
-      inputField.setAttribute('type', type);
-      
-      toggleBtn.innerHTML = type === 'password' ? eyeOpenIcon : eyeClosedIcon;
-    });
-  }
-
-  setupPasswordToggle('toggle-password', 'password');
-
-  loginForm.addEventListener('submit', async function(event) {
-    
-    // Stop refreshing 
-    event.preventDefault();
-
-    errorMessage.style.color = '#ff4d4d';
-    errorMessage.textContent = '';
-
-    // Get exact text and trim spaces
-    const emailValue = emailInput.value.trim();
-    const passwordValue = passwordInput.value.trim();
-
-    // VALIDATION
-    if (emailValue === '') {
-        errorMessage.textContent = 'Please enter your email address.';
-      return; 
-    }
-
-    if (passwordValue === '') {
-       errorMessage.textContent = 'Please enter your password.';
-      return; 
-    }
-    
-    errorMessage.style.color = '#24b47e'; 
-    errorMessage.textContent = 'Checking credentials...';
-    
-    // Tell Supabase to log the user in
-    const { data, error } = await supabase.auth.signInWithPassword({
-      email: emailValue,
-      password: passwordValue,
-    });
-  
-    // Handle Supabase response
-    if (error) {
-      errorMessage.style.color = '#ff4d4d'; // Switch back to red
-      errorMessage.textContent = 'Invalid email or password.'; 
-    } else {
-      errorMessage.textContent = 'Success! Welcome back...';
-      // Redirect to your home page
-      window.location.href = 'home.html'; 
-    }
-  });
-</script>
-
+</footer>
 </body>
+
 </html>
+
